@@ -1,0 +1,25 @@
+// import renderToDOM from '../../utils/renderToDom';
+// import { getWords } from '../../api/bookData';
+
+// const selectAuthor = (uid, authorId) => {
+//   let domString = `<label for="author">Select an Author</label>
+//     <select class="form-control" id="author_id" required>
+//     <option value="">Select an Author</option>`;
+
+//   getWords(uid).then((authorsArray) => {
+//     authorsArray.forEach((author) => {
+//       domString += `
+//           <option
+//             value="${author.firebaseKey}"
+//             ${authorId === author.firebaseKey ? 'selected' : ''}>
+//               ${author.first_name} ${author.last_name}
+//           </option>`;
+//     });
+
+//     domString += '</select>';
+
+//     renderToDOM('#select-author', domString);
+//   });
+// };
+
+// export default selectAuthor;
