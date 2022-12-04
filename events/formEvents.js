@@ -21,7 +21,7 @@ const formEvents = (user) => {
       });
     }
     // FIXME:ADD CLICK EVENT FOR EDITING AN AUTHOR
-    if (e.target.id.includes('update-word')) {
+    if (e.target.id.includes('editWord')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         title: document.querySelector('#title').value,

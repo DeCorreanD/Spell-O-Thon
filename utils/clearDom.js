@@ -1,5 +1,5 @@
 const clearDom = () => {
-  document.querySelector('#store-cards').innerHTML = '';
+  document.querySelector('#store').innerHTML = '';
   document.querySelector('#view').innerHTML = '';
 };
 

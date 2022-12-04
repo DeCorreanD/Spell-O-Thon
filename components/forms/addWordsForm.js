@@ -14,13 +14,21 @@ const addWordsForm = (obj = {}) => {
         <label for="definition">Definition</label>
         <textarea class="form-control" placeholder="Definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
       </div>
+      <div class="form-group">
+        <label for="time_submitted">Time Submitted</label>
+        <textarea class="form-control" placeholder="Time Submitted" id="time_submitted" style="height: 100px">${obj.time_submitted || ''}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="type">Type</label>
+        <textarea class="form-control" placeholder="Type" id="type" style="height: 100px">${obj.type || ''}</textarea>
+      </div>
       <div class="form-group" id="select-type">
       </div>
       <button type="submit" class="btn btn-primary">Submit Word
       </button>
     </form>`;
 
-  renderToDOM('#form-container', domString);
+  renderToDOM('#navigation', domString);
   // selectAuthor(uid, `${obj.author_id || ''}`);
 };
 

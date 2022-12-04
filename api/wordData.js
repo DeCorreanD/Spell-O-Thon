@@ -74,7 +74,43 @@ const getSingleWord = (firebaseKey) => new Promise((resolve, reject) => {
     .then((data) => resolve(data))
     .catch(reject);
 });
+// filter by other
+const filterOther = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Words.json?orderBy="type"&equalTo="Other"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+// filter by Computing
+const filterComputing = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Words.json?orderBy="type"&equalTo="COMPUTING/TELECOMMUNICATIONS"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+// filter by Storytelling
+const filterStorytelling = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Words.json?orderBy="type"&equalTo="storytelling/Fable`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
 
 export {
-  updateWord, deleteWords, getWords, createWord, getSingleWord
+  updateWord, deleteWords, getWords, createWord, getSingleWord, filterOther, filterComputing, filterStorytelling
 };

@@ -8,7 +8,7 @@ const domBuilder = () => {
 <button class="button2" value="storytelling" id="storytelling">Storytelling/Fable</button>
 <button class="button3" value="other" id="other">Other</button>
 <button class="button4" value="All-types" id="All-types">All</button>
-      <div id="store-cards"></div>
+      <div id="store"></div>
       <div id="view"></div>
   </div>`;
 
