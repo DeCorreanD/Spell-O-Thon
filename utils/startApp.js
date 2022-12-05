@@ -6,7 +6,6 @@ import formEvents from '../events/formEvents';
 import domEvents from '../events/domEvents';
 import viewWords from '../pages/viewWords';
 import { getWords } from '../api/wordData';
-import showWords from '../pages/words';
 
 const startApp = (user) => {
   domBuilder(user); // BUILD THE DOM
@@ -16,7 +15,6 @@ const startApp = (user) => {
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
   navigationEvents(user); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
   getWords(user).then(() => viewWords(user));
-  showWords().then(() => viewWords());
 };
 
 export default startApp;

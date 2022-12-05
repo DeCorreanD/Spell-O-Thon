@@ -28,7 +28,7 @@ const domEvents = (user) => {
       // console.warn(e.target.id.split('--'));
       const [, firebaseKey] = e.target.id.split('--');
 
-      getSingleWord(firebaseKey).then(() => addWordsForm(user));
+      getSingleWord(firebaseKey).then(addWordsForm);
       // getSingleBook(firebaseKey).then(addBookForm); // using the callback method
     }
 
