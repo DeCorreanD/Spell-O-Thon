@@ -3,24 +3,26 @@
 
 
 body {
-  background-color: antiquewhite;
+  background-color: lightblue;
   color: brown;
   text-align: center;
   margin-top: 100px;
 }
 
-#store {
-width: 90%;
+.card {
+width: 255px;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     text-align: center;
-    margin: auto;
+    margin: 50px;
     justify-content: center;
+    height: 424px;
+    padding: 100px;
+    align-items:baseline;
+    align-content:center;
+    contain: content;
 }
 
-.card {
-  margin: 20px;
-	padding: 5px;
-	border-radius: 10px;
-	text-align: center;
+.card-definition {
+  text-justify: newspaper;
 }

@@ -83,7 +83,10 @@ const filterOther = () => new Promise((resolve, reject) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(data))
+    .then((data) => {
+      const others = Object.values(data).filter((item) => item.type);
+      resolve(others);
+    })
     .catch(reject);
 });
 // filter by Computing
@@ -95,19 +98,25 @@ const filterComputing = () => new Promise((resolve, reject) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(data))
+    .then((data) => {
+      const computers = Object.values(data).filter((item) => item.type);
+      resolve(computers);
+    })
     .catch(reject);
 });
 // filter by Storytelling
 const filterStorytelling = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Words.json?orderBy="type"&equalTo="storytelling/Fable`, {
+  fetch(`${endpoint}/Words.json?orderBy="type"&equalTo="storytelling/Fable"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(data))
+    .then((data) => {
+      const fables = Object.values(data).filter((item) => item.type);
+      resolve(fables);
+    })
     .catch(reject);
 });
 

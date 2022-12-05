@@ -1,4 +1,6 @@
-import { deleteWords, getSingleWord, getWords } from '../api/wordData';
+import {
+  deleteWords, filterComputing, filterOther, filterStorytelling, getSingleWord, getWords
+} from '../api/wordData';
 import addWordsForm from '../components/forms/addWordsForm';
 import showWords from '../pages/words';
 
@@ -29,11 +31,21 @@ const domEvents = (user) => {
       const [, firebaseKey] = e.target.id.split('--');
 
       getSingleWord(firebaseKey).then(addWordsForm);
-      // getSingleBook(firebaseKey).then(addBookForm); // using the callback method
     }
 
     // filter buttons
-    // document.querySelector('#computing').addEventListener('click');
+    document.querySelector('#computing').addEventListener('click', () => {
+      filterComputing(user).then(showWords);
+    });
+    document.querySelector('#storytelling').addEventListener('click', () => {
+      filterStorytelling(user).then(showWords);
+    });
+    document.querySelector('#other').addEventListener('click', () => {
+      filterOther(user).then(showWords);
+    });
+    document.querySelector('#All-types').addEventListener('click', () => {
+      getWords(user).then(showWords);
+    });
   });
 };
 export default domEvents;
