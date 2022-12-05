@@ -91,7 +91,7 @@ const filterOther = () => new Promise((resolve, reject) => {
 });
 // filter by Computing
 const filterComputing = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Words.json?orderBy="type"&equalTo="COMPUTING/TELECOMMUNICATIONS"`, {
+  fetch(`${endpoint}/Words.json?orderBy="type"&equalTo="Computing"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ const filterComputing = () => new Promise((resolve, reject) => {
 });
 // filter by Storytelling
 const filterStorytelling = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Words.json?orderBy="type"&equalTo="storytelling/Fable"`, {
+  fetch(`${endpoint}/Words.json?orderBy="type"&equalTo="Storytelling"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

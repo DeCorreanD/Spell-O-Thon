@@ -4,7 +4,7 @@
 		"title": "asynchronous",
 		"definition": "of or requiring a form of computer control timing protocol in which a specific operation begins upon receipt of an indication (signal) that the preceding operation has been completed.",
 		"time_submitted": "01/10/2022",
-		"type": "COMPUTING/TELECOMMUNICATIONS",
+		"type": "Computing",
 		"uid": null
 	},
 	"-NI5RoLjBQ6vd7F2Lkoq": {
@@ -20,7 +20,7 @@
 		"title": "synchronous",
 		"definition": "of, used in, or being digital communication (as between computers) in which a common timing signal is established that dictates when individual bits can be transmitted and which allows for very high rates of data transfer.",
 		"time_submitted": "02/21/2022",
-		"type": "COMPUTING/TELECOMMUNICATIONS",
+		"type": "Computing",
 		"uid": null
 	},
 	"-NI5RoLoDejI_Rpk_Wey": {
@@ -36,7 +36,7 @@
 		"title": "anachronistic",
 		"definition": "a story that didn’t actually happen.",
 		"time_submitted": "05/05/2022",
-		"type": "storytelling/Fable",
+		"type": "Storytelling",
 		"uid": null
 	},
 	"-NI5RoLsGmZ05o8mjSDu": {
