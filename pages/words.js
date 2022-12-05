@@ -4,9 +4,6 @@ import renderToDOM from '../utils/renderToDom';
 const showWords = (array) => {
   clearDom();
 
-  const btnString = '<button type="submit" class="btn btn-primary">Submit Word </button>';
-  renderToDOM('#submit-word', btnString);
-
   let domString = '';
   array.forEach((item) => {
     domString += `

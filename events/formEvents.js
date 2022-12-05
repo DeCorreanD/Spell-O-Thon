@@ -1,4 +1,5 @@
 import { createWord, getWords, updateWord } from '../api/wordData';
+import addWordsForm from '../components/forms/addWordsForm';
 import showWords from '../pages/words';
 
 const formEvents = (user) => {
@@ -10,11 +11,11 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         type: document.querySelector('#type').value,
-        time_submitted: document.querySelector('#time_submitted').value,
+        time_submitted: document.querySelector('#time_submitted').value
+        // firebaseKey: document.querySelector('#firebaseKey'),
       };
-      createWord(payload).then(({ title }) => {
-        const patchPayload = { firebaseKey: title };
-
+      createWord(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
         updateWord(patchPayload).then(() => {
           getWords(user).then(showWords);
         });
@@ -31,7 +32,7 @@ const formEvents = (user) => {
         firebaseKey,
       };
       updateWord(payload).then(() => {
-        getWords(user).then(showWords);
+        getWords(user).then(addWordsForm);
       });
     }
   });

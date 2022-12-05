@@ -31,5 +31,4 @@ const addWordsForm = (obj = {}) => {
   renderToDOM('#navigation', domString);
   // selectAuthor(uid, `${obj.author_id || ''}`);
 };
-
 export default addWordsForm;

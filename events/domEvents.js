@@ -23,7 +23,7 @@ const domEvents = (user) => {
     }
 
     // TODO: CLICK EVENT EDITING/UPDATING A BOOK
-    if (e.target.id.includes('update-Word')) {
+    if (e.target.id.includes('editWord')) {
       // console.warn('EDIT BOOK', e.target.id);
       // console.warn(e.target.id.split('--'));
       const [, firebaseKey] = e.target.id.split('--');
