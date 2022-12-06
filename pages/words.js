@@ -8,10 +8,9 @@ const showWords = (array) => {
   array.forEach((item) => {
     domString += `
       <div class="card">
-        <div class="card-body" style="height: 180px;">
+        <div class="card-body">
           <h5 class="card-title">${item.title}</h5>
           <h2 class="card-definition">${item.definition}</h2>
-          <p class="time-stamp">${item.time_submitted}</p>
           <p class="type">${item.type}</p>
             <hr>
             <i id="editWord--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>

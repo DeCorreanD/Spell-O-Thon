@@ -1,25 +1,26 @@
 // import renderToDOM from '../../utils/renderToDom';
-// import { getWords } from '../../api/bookData';
+// import { getWords } from '../../api/wordData';
 
-// const selectAuthor = (uid, authorId) => {
-//   let domString = `<label for="author">Select an Author</label>
-//     <select class="form-control" id="author_id" required>
-//     <option value="">Select an Author</option>`;
+// const selectType = (uid, typeId) => {
+//   let domString = `<label for="type">Type</label>
+//         <textarea class="form-control" placeholder="Type" id="type" style="height: 100px"></textarea>
+//       </div>
+//       <div class="form-group" id="select-type">`;
 
-//   getWords(uid).then((authorsArray) => {
-//     authorsArray.forEach((author) => {
+//   getWords(uid).then((typeArray) => {
+//     typeArray.forEach((type) => {
 //       domString += `
 //           <option
-//             value="${author.firebaseKey}"
-//             ${authorId === author.firebaseKey ? 'selected' : ''}>
-//               ${author.first_name} ${author.last_name}
+//             value="${type.firebaseKey}"
+//             ${typeId === type.firebaseKey ? 'selected' : ''}>
+//               ${type.type}
 //           </option>`;
 //     });
 
 //     domString += '</select>';
 
-//     renderToDOM('#select-author', domString);
+//     renderToDOM('#select-type', domString);
 //   });
 // };
 
-// export default selectAuthor;
+// export default selectType;

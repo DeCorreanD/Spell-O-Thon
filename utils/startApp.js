@@ -9,12 +9,12 @@ import { getWords } from '../api/wordData';
 
 const startApp = (user) => {
   domBuilder(user); // BUILD THE DOM
-  navBar(); // DYNAMICALLY ADD THE NAV
-  formEvents(user); // ADD FORM EVENT LISTENTERS TO THE DOM
   domEvents(user); // ADD THE EVENT LISTENTERS TO THE DOM
+  formEvents(user); // ADD FORM EVENT LISTENTERS TO THE DOM
+  navBar(); // DYNAMICALLY ADD THE NAV
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
   navigationEvents(user); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
-  getWords(user).then(showWords);
+  getWords(user.uid).then(showWords);
 };
 
 export default startApp;

@@ -1,5 +1,6 @@
 import renderToDOM from '../../utils/renderToDom';
 import clearDom from '../../utils/clearDom';
+// import selectType from './selectType';
 
 // USING THIS FORM FOR BOTH CREATE AND UPDATE
 const addWordsForm = (obj = {}) => {
@@ -15,10 +16,6 @@ const addWordsForm = (obj = {}) => {
         <textarea class="form-control" placeholder="Definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
       </div>
       <div class="form-group">
-        <label for="time_submitted">Time Submitted</label>
-        <textarea class="form-control" placeholder="Time Submitted" id="time_submitted" style="height: 100px">${obj.time_submitted || ''}</textarea>
-      </div>
-      <div class="form-group">
         <label for="type">Type</label>
         <textarea class="form-control" placeholder="Type" id="type" style="height: 100px">${obj.type || ''}</textarea>
       </div>
@@ -28,7 +25,7 @@ const addWordsForm = (obj = {}) => {
       </button>
     </form>`;
 
-  renderToDOM('#navigation', domString);
-  // selectAuthor(uid, `${obj.author_id || ''}`);
+  renderToDOM('#form', domString);
+  // selectType(uid, `${obj.type || ''}`);
 };
 export default addWordsForm;

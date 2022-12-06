@@ -5,8 +5,8 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 // TODO: GET Words
-const getWords = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Words.json`, {
+const getWords = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Words.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const deleteWords = (firebaseKey) => new Promise((resolve, reject) => {
     .then((data) => resolve(data))
     .catch(reject);
 });
-// TODO: CREATE BOOK
+// TODO: CREATE Words
 const createWord = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/Words.json`, {
     method: 'POST',
@@ -49,7 +49,7 @@ const createWord = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// TODO: UPDATE BOOK
+// TODO: UPDATE Word
 const updateWord = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/Words/${payload.firebaseKey}.json`, {
     method: 'PATCH',

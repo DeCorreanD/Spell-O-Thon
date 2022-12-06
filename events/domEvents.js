@@ -13,7 +13,7 @@ const domEvents = (user) => {
         // console.warn('CLICKED DELETE BOOK', e.target.id);
         const [, firebaseKey] = e.target.id.split('--');
         deleteWords(firebaseKey).then(() => {
-          getWords(user).then(showWords);
+          getWords(user.uid).then(showWords);
         });
       }
     }
@@ -24,9 +24,9 @@ const domEvents = (user) => {
       addWordsForm(user);
     }
 
-    // TODO: CLICK EVENT EDITING/UPDATING A BOOK
+    // TODO: CLICK EVENT EDITING/UPDATING A Word
     if (e.target.id.includes('editWord')) {
-      // console.warn('EDIT BOOK', e.target.id);
+      // console.warn('EDIT WORD', e.target.id);
       // console.warn(e.target.id.split('--'));
       const [, firebaseKey] = e.target.id.split('--');
 
@@ -44,7 +44,7 @@ const domEvents = (user) => {
       filterOther(user).then(showWords);
     });
     document.querySelector('#All-types').addEventListener('click', () => {
-      getWords(user).then(showWords);
+      getWords(user.uid).then(showWords);
     });
   });
 };

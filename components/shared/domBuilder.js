@@ -4,6 +4,7 @@ const domBuilder = () => {
   const domString = `
   <div id="navigation"></div>
   <div id="main-container">
+  <div id="form"></div>
   <button class="button1" value="computing" id="computing">Computing</button>
 <button class="button2" value="storytelling" id="storytelling">Storytelling</button>
 <button class="button3" value="other" id="other">Other</button>

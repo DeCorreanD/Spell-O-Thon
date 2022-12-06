@@ -4,25 +4,14 @@
 
 body {
   background-color: lightblue;
-  color: brown;
+  color:lightcoral;
   text-align: center;
   margin-top: 100px;
 }
 
 .card {
-width: 255px;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 50px;
-    justify-content: center;
-    height: 424px;
-    padding: 100px;
-    align-items:baseline;
-    align-content:center;
-    contain: content;
-}
-
-.card-definition {
-  text-justify: newspaper;
+  width: 300px;
+  display: flex;
+  flex-wrap: row wrap;
+  margin: 5px;
 }
