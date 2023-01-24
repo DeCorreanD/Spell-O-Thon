@@ -13,5 +13,8 @@ body {
   width: 300px;
   display: flex;
   flex-wrap: row wrap;
-  margin: 5px;
+  margin: 10px;
+  flex-direction: column;
+  border-radius: 20%;
+  padding: 10px;
 }
